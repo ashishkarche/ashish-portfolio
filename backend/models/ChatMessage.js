@@ -1,3 +1,4 @@
+// models/ChatMessage.js
 class ChatMessage {
     constructor(name, email, message) {
       this.name = name;

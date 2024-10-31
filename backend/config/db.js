@@ -1,3 +1,4 @@
+// config / db.js
 require('dotenv').config();
 const mysql = require('mysql2/promise');  // Use promise-based mysql2
 const fs = require('fs');
