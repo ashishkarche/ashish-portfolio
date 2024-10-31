@@ -1,0 +1,42 @@
+/* src/components/Loading.css */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1d1f21; /* Match your body background */
+    color: #eaeaea;
+  }
+  
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cube {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background-color: #8a2be2; /* Your accent color */
+    animation: cubeAnimation 1.2s infinite ease-in-out;
+  }
+  
+  .cube:nth-child(1) {
+    animation-delay: -0.4s;
+  }
+  
+  .cube:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  
+  @keyframes cubeAnimation {
+    0%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+  }
+  
