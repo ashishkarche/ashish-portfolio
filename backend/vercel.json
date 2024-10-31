@@ -1,34 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "frontend/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "frontend/build"
-        }
-      },
-      {
-        "src": "backend/server.js",  
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "backend/$1"  
-      },
-      {
-        "src": "/(.*)",
-        "dest": "frontend/build/$1"  
-      }
-    ],
-    "env": {
-      "DB_HOST": "gateway01.ap-southeast-1.prod.aws.tidbcloud.com",
-      "DB_USER": "2QgHG6Py5tkshJi.root",
-      "DB_PASSWORD": "MLaJACYpikLI68yI",
-      "DB_DATABASE": "portfolio_db", 
-      "DB_PORT": "4000"  
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/server.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/server.js"
+    }
+  ],
+  "env": {
+    "DB_HOST": "gateway01.ap-southeast-1.prod.aws.tidbcloud.com",
+    "DB_USER": "2QgHG6Py5tkshJi.root",
+    "DB_PASSWORD": "MLaJACYpikLI68yI",
+    "DB_DATABASE": "portfolio_db", 
+    "DB_PORT": "4000" 
   }
-  
+}
