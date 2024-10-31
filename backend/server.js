@@ -14,6 +14,9 @@ app.use(express.json());
 app.use('/api/projects', projectsRoutes);
 app.use('/api/chat', chatRoutes);
 
+app.get("/",(req,res) =>{
+    res.json("Sucess");
+})
 // server.js or app.js
 app.get('/api/projects/:id', async (req, res) => {
     const projectId = req.params.id;

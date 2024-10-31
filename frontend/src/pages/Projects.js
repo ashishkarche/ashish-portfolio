@@ -18,7 +18,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects');
+        const response = await axios.get('https://ashish-portfolio-server.vercel.app/api/projects');
         const projectsWithImages = response.data.map((project) => ({
           ...project,
           image: projectImages[project.title] || '/assets/images/default.jpg', // Fallback image
