@@ -8,7 +8,7 @@ const projectImages = {
   'Coding Challenge Platform': '/assets/images/coding-challenge-platform.jpg',
   'Travel Company Website': '/assets/images/travel-company.jpg',
   'Secure File App - Hybrid Cryptography File Sharing': '/assets/images/secure-file-app.jpg',
-  'AI-powered ChatBot': '/assets/images/ai-chatbot.jpg',
+  'AI-powered ChatBot': '/assets/images/aI-chatBot.jpg',
 };
 
 const Projects = () => {
