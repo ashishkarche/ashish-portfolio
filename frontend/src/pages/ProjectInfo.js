@@ -10,7 +10,7 @@ const ProjectInfo = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/projects/${id}`); // Adjust the URL as needed
+        const response = await axios.get(`https://ashish-portfolio-server.vercel.app/api/projects/${id}`); // Adjust the URL as needed
         setProject(response.data); // Set the project data from the response
       } catch (err) {
         console.error('Error fetching project:', err);
