@@ -9,7 +9,7 @@ const Home = () => {
         {/* Profile Section */}
         <section className="profile-section">
           <h1 className="name mt-3">
-            Ashish Karche <span className="pronouns">They/them</span>
+            Ashish Karche <span className="pronouns">he/him</span>
           </h1>
           <p className="tagline text">
             Recent Computer Engineering Graduate specializing in full-stack web development with expertise
