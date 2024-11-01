@@ -9,6 +9,7 @@ const projectImages = {
   'Travel Company Website': '/assets/images/travel-company.jpg',
   'Secure File App - Hybrid Cryptography File Sharing': '/assets/images/secure-file-app.jpg',
   'AI-powered ChatBot': '/assets/images/aI-chatBot.jpg',
+  'Flyer Ui/ Ux Template': '/assets/images/flyer.jpg',
 };
 
 const Projects = () => {
