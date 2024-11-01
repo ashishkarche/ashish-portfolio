@@ -178,6 +178,47 @@ section {
     justify-content: space-between;
     width: 100%;
   }
+
+  .profile-section {
+    flex: 1;
+    padding: 2rem;
+  }
+}
+
+/* Responsive styles for tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .name {
+    font-size: 2rem; /* Adjust name font size for tablet */
+  }
+
+  .tagline {
+    font-size: 1.1rem; /* Adjust tagline font size for tablet */
+  }
+
+  .social-button {
+    font-size: 1.1rem; /* Adjust button font size for tablet */
+    padding: 0.5rem 1rem; /* Adjust button padding for tablet */
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 767px) {
+  .landing-page {
+    padding: 3rem 1rem; /* Adjust padding for mobile */
+  }
+
+  .name {
+    font-size: 1.8rem; /* Smaller name font size for mobile */
+  }
+
+  .tagline {
+    font-size: 1rem; /* Smaller tagline font size for mobile */
+  }
+
+  .social-button {
+    font-size: 1rem; /* Smaller button font size for mobile */
+    padding: 0.5rem; /* Smaller padding for mobile buttons */
+  }
 }
 
 .profile-section {
@@ -222,7 +263,6 @@ section {
   }
 }
 
-
 .social-buttons {
   display: flex;
   gap: 1rem;
@@ -260,6 +300,7 @@ section {
   margin-top: 1.5rem;
 }
 
+
 /* Project Card Styling */
 .project-card {
   background: linear-gradient(135deg, #24292e, #1f1f1f);
@@ -272,6 +313,7 @@ section {
   max-width: 320px; /* Adjusted max width for better fit */
   position: relative; /* For positioning pseudo-elements */
   overflow: hidden; /* Prevents overflow of pseudo-elements */
+  
 }
 
 .project-card:hover {
@@ -357,8 +399,6 @@ section {
   color: #fff; /* Ensures text color remains white on hover */
 }
 
-
-/* About Section Heading with Glowing Line */
 .project-section {
   text-align: center;
   margin-bottom: 2rem;
@@ -395,6 +435,104 @@ section {
     align-items: center;
   }
 }
+
+/* Enhanced Responsive Styles */
+
+/* General responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 1rem; /* Adjusted padding */
+  }
+
+  .project-card-body {
+    padding: 0.5rem; /* Smaller padding for compact layout */
+  }
+
+  .project-title {
+    font-size: 1.3rem; /* Reduced font size */
+  }
+
+  .project-description {
+    font-size: 0.9rem; /* Smaller font size for readability */
+  }
+  
+  .project-button {
+    padding: 0.5rem 1.2rem; /* Adjust button padding for mobile */
+    font-size: 0.9rem;
+  }
+
+  /* Hide project image on smaller screens if needed */
+  .project-image img {
+    max-width: 90%;
+    border-radius: 8px;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-card {
+    max-width: 90%; /* Larger cards */
+    padding: 1.2rem;
+  }
+
+  .project-title {
+    font-size: 1.4rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+/* Large screen adjustments for alignment and layout */
+@media (min-width: 1025px) {
+  .project-list {
+    justify-content: space-around; /* Space out project cards */
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 300px; /* Fixed width on larger screens */
+  }
+}
+
+/* Additional Styles and Hover Effects */
+.project-card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+}
+
+.project-title:hover {
+  color: #fff; /* Additional hover effect */
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* Improved glowing line animation for headings */
+@keyframes glowingLine {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.project-section h2 {
+  font-size: 2.2rem; /* Slightly larger font for headings */
+}
+
+@media (max-width: 768px) {
+  .project-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
 /* Project Info Section Styling */
 
 /* Main Section Styling */
@@ -432,27 +570,6 @@ section {
   padding: 0 1rem; /* Padding for better text alignment */
 }
 
-/* Project Image */
-.project-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem; /* Adds space below the image */
-  border-radius: 15px; /* Matches section border radius */
-  overflow: hidden; /* Ensures no overflow of the image */
-  background: rgba(255, 255, 255, 0.1); /* Light background for contrast */
-}
-
-.project-image img {
-  max-width: 100%; /* Ensures the image is responsive */
-  height: auto; /* Maintains aspect ratio */
-  transition: transform 0.3s ease; /* Smooth image hover effect */
-}
-
-.project-image img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
 /* Project Button */
 .project-button {
   display: inline-block;
@@ -474,6 +591,175 @@ section {
   transform: translateY(-2px); /* Lift effect on hover */
 }
 
+.related-projects {
+  text-align: center; /* Center the heading */
+  margin-top: 2rem; /* Space above the section */
+  padding: 1.5rem; /* Increased padding around the section */
+  background-color: #121212; /* Dark background for contrast */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow for the section */
+}
+
+.related-projects h3 {
+  font-size: 2.5rem; /* Increased size for heading */
+  color: #8a2be2; /* Matching color scheme */
+  margin-bottom: 1rem; /* Space below the heading */
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.7); /* Glowing effect */
+}
+
+.project-title2 {
+  font-size: 1.5rem; /* Increased title size */
+  color: #765c8f; /* White color for visibility */
+  margin: 0.5rem 0; /* Margin above and below the title */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.project-title2:hover {
+  color: #8a2be2; /* Change color on hover */
+}
+
+
+.project-description2 {
+  font-size: 1.1rem; /* Increased description size */
+  color: #d3d3d3; /* Light gray for description */
+  margin-bottom: 1.5rem; /* Space below the description */
+  line-height: 1.8; /* Increase line height for readability */
+  padding: 0 1rem; /* Horizontal padding for descriptions */
+  font-style: italic; /* Italic style for descriptions */
+}
+
+.row {
+  display: flex; /* Flex display for the row of related projects */
+  justify-content: center; /* Center the cards */
+  flex-wrap: wrap; /* Allow cards to wrap */
+  margin: 0 -10px; /* Prevent margin collapse */
+}
+
+.related-project-card {
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow for inner elements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  padding: 0 10px; /* Inner padding */
+  margin-bottom: 20px; /* Space below each card */
+  flex: 1 1 30%; /* Default size for cards */
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.project-card2 {
+  display: block; /* Block display for the card */
+  padding: 1.5rem; /* Increased padding for better spacing */
+  background: radial-gradient(circle at 50% 50%, #1d1f21, #0d1117); /* Gradient background */
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  border: 1px solid #8a2be2; /* Subtle border */
+  height: 100%; /* Full height for the card */
+  border-radius: 10px; /* Rounded corners for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* 3D tilt effect on hover */
+.related-project-card:hover .project-card2 {
+  transform: rotateY(5deg) rotateX(5deg); /* 3D tilt */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+  }
+}
+
+/* Responsive Styles */
+
+/* For mobile devices */
+@media (max-width: 576px) {
+  .related-projects h3 {
+    font-size: 1.8rem; /* Smaller heading on mobile */
+  }
+
+  .project-title2 {
+    font-size: 1.2rem; /* Smaller title for mobile */
+  }
+
+  .project-description2 {
+    font-size: 0.9rem; /* Smaller description for mobile */
+  }
+
+  .related-project-card {
+    flex: 1 1 100%; /* Full width on mobile */
+    max-width: 100%; /* Prevent overflow */
+  }
+}
+
+/* For tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .related-projects h3 {
+    font-size: 2rem; /* Slightly larger heading for tablets */
+  }
+
+  .project-title2 {
+    font-size: 1.4rem; /* Adjust title size for tablets */
+  }
+
+  .project-description2 {
+    font-size: 1rem; /* Adjust description size for tablets */
+  }
+
+  .related-project-card {
+    flex: 1 1 48%; /* Two cards per row on tablets */
+    max-width: 48%; /* Max width for two cards */
+  }
+}
+
+/* For larger tablets and small laptops */
+@media (min-width: 769px) and (max-width: 992px) {
+  .related-projects h3 {
+    font-size: 2.2rem; /* Heading size for larger tablets */
+  }
+
+  .project-title2 {
+    font-size: 1.5rem; /* Adjust title size for larger tablets */
+  }
+
+  .project-description2 {
+    font-size: 1.1rem; /* Adjust description size for larger tablets */
+  }
+
+  .related-project-card {
+    flex: 1 1 30%; /* Three cards per row */
+    max-width: 30%; /* Max width for three cards */
+  }
+}
+
+/* For PCs and larger screens */
+@media (min-width: 993px) {
+  .related-projects h3 {
+    font-size: 2.5rem; /* Larger heading for desktops */
+  }
+
+  .project-title2 {
+    font-size: 1.6rem; /* Title size for desktops */
+  }
+
+  .project-description2 {
+    font-size: 1.1rem; /* Description size for desktops */
+  }
+
+  .related-project-card {
+    flex: 1 1 30%; /* Three cards per row on desktops */
+    max-width: 30%; /* Max width for three cards */
+  }
+}
+
+
 /* Section Title with Glowing Line */
 .section-title {
   font-size: 2rem; /* Size for section titles */
@@ -490,7 +776,7 @@ section {
   left: 0;
   right: 0;
   bottom: -5px;
-  height: 5px; /* Increased height for visibility */
+  height: 4px; /* Increased height for visibility */
   background: linear-gradient(135deg, #8a2be2, #4c9fff);
   box-shadow: 0 0 15px rgba(138, 43, 226, 0.8), 0 0 25px rgba(72, 181, 255, 0.5);
   animation: glowingLine 2s infinite alternate; /* Animation for glow */
@@ -645,37 +931,43 @@ section {
 /* About Section Styling */
 .about-section {
   padding: 3rem 1rem;
-  background-color: #0d1117; /* Dark background */
-  color: #eaeaea; /* Light text color */
-  text-align: left; /* Align text to the left */
+  background-color: #0d1117;
+  color: #eaeaea;
+  text-align: left;
 }
 
 /* Flexbox layout for about content */
 .about-content {
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center items vertically */
-  max-width: 1200px; /* Optional: limit max width */
-  margin: 0 auto; /* Center the content */
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem; /* Add gap for spacing */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Profile Picture Styling */
 .profile-pic {
-  width: 150px; /* Set width of the profile picture */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 75px; /* Make it circular */
-  margin-right: 2rem; /* Space between picture and text */
-  border: 3px solid #8a2be2; /* Add a border to the profile picture */
-  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5); /* Subtle shadow effect */
+  width: 150px;
+  height: auto;
+  border-radius: 75px;
+  border: 3px solid #8a2be2;
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+  transition: transform 0.3s ease; /* Add scaling on hover */
+}
+
+.profile-pic:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* About Section Heading with Glowing Line */
 .about-section h2 {
-  font-size: 2.5rem; /* Increased font size */
-  color: #8a2be2; /* Heading color */
+  font-size: 2.5rem;
+  color: #8a2be2;
   margin-bottom: 1rem;
   display: inline-block;
   position: relative;
-  text-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(72, 181, 255, 0.5); /* Text shadow effect */
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(72, 181, 255, 0.5);
 }
 
 /* Glowing line effect */
@@ -693,57 +985,79 @@ section {
 }
 
 /* About Section Paragraphs */
-/* About Section Paragraphs */
 .about-section p {
-  font-size: 1.1rem; /* Slightly increased font size for readability */
-  color: #a6a6a6; /* Light gray text color */
-  max-width: 800px; /* Max width for paragraphs */
-  margin: 0 auto 1.5rem; /* Center paragraphs with space below */
-  line-height: 1.8; /* Increased line height for better spacing */
-  text-align: justify; /* Justify text for a neat look */
-  padding: 0.5rem; /* Add some padding for breathing space */
-  border-left: 4px solid #8a2be2; /* Left border for emphasis */
-  background-color: rgba(255, 255, 255, 0.05); /* Light background for contrast */
-  border-radius: 5px; /* Rounded corners for a softer look */
-  transition: color 0.3s ease; /* Smooth color transition */
-
-}
-
-/* Responsive Styles for Paragraphs */
-@media (max-width: 768px) {
-  .about-section p {
-    font-size: 1rem; /* Adjust paragraph size for smaller screens */
-    padding: 0.3rem; /* Reduce padding on smaller screens */
-  }
+  font-size: 1.1rem;
+  color: #a6a6a6;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+  text-align: justify;
+  padding: 0.5rem;
+  border-left: 4px solid #8a2be2;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  transition: color 0.3s ease;
 }
 
 /* Hover effect on paragraphs */
 .about-section p:hover {
-  color: #ffffff; /* Change color on hover */
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add a glow effect on hover */
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-section h2 {
+    font-size: 2.2rem;
+  }
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center; /* Center text on smaller screens */
+  }
+  .profile-pic {
+    margin-bottom: 1rem;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+  }
+  .about-section p {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 0.5rem; /* Reduce padding for very small screens */
+  }
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+  .profile-pic {
+    width: 120px; /* Smaller profile picture for mobile */
+    border-radius: 60px;
+  }
+  .about-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
 }
 
 /* Glowing line animation keyframes */
 @keyframes glowingLine {
   0% {
-    transform: scaleX(0); /* Initial state */
+    transform: scaleX(0);
   }
   100% {
-    transform: scaleX(1); /* Final state */
+    transform: scaleX(1);
   }
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .about-section h2 {
-    font-size: 2rem; /* Adjust heading size for smaller screens */
-  }
-
-  .about-section p {
-    font-size: 1rem; /* Adjust paragraph size for smaller screens */
-  }
-}
-
 
 /* Footer Styling */
 .footer {
@@ -754,11 +1068,19 @@ section {
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-text {
   font-size: 1.2rem;
   color: #a6a6a6;
+  margin-bottom: 1rem;
 }
 
 .social-links {
@@ -769,14 +1091,14 @@ section {
 }
 
 .social-icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Slightly larger icon size */
   color: #eaeaea;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Added color transition */
 }
 
 .social-icon:hover {
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0px 4px 15px rgba(138, 43, 226, 0.5);
+  box-shadow: 0px 4px 20px rgba(138, 43, 226, 0.5);
   color: #8a2be2;
 }
 
@@ -792,17 +1114,23 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150%;
-  height: 150%;
+  width: 200%; /* Increased width for a wider background */
+  height: 200%;
   background: radial-gradient(circle, rgba(72, 181, 255, 0.1), transparent);
   transform: translate(-50%, -50%);
-  animation: pulse 3s infinite;
+  animation: pulse 4s infinite; /* Slower pulse animation */
+  z-index: 0; /* Ensure it is behind other elements */
+}
+
+.footer-content > * {
+  position: relative; /* Ensure footer content is on top of the background */
+  z-index: 1;
 }
 
 /* Background pulse animation */
 @keyframes pulse {
   0%, 100% { opacity: 0.1; transform: scale(1); }
-  50% { opacity: 0.2; transform: scale(1.05); }
+  50% { opacity: 0.3; transform: scale(1.05); } /* Increased opacity */
 }
 
 /* Keyframes for the glowing line animation */
